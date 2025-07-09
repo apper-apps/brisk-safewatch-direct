@@ -8,7 +8,41 @@ import { cn } from "@/utils/cn";
 
 const WorkerProfiles = ({ workers, onEditWorker, onDeleteWorker, className }) => {
   const [viewMode, setViewMode] = useState("grid");
+  const [imageErrors, setImageErrors] = useState({});
+  const [imageLoading, setImageLoading] = useState({});
 
+  // Generate fallback avatar with user initials
+  const generateFallbackAvatar = (fullName) => {
+    const initials = fullName
+      .split(' ')
+      .map(name => name.charAt(0))
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+    
+    return (
+      <div className="w-full h-full bg-gradient-to-br from-primary/80 to-secondary/80 flex items-center justify-center text-white font-semibold">
+        {initials}
+      </div>
+    );
+  };
+
+  // Handle image loading errors
+  const handleImageError = (workerId, workerName) => {
+    console.warn(`Failed to load profile image for worker: ${workerName} (ID: ${workerId})`);
+    setImageErrors(prev => ({ ...prev, [workerId]: true }));
+    setImageLoading(prev => ({ ...prev, [workerId]: false }));
+  };
+
+  // Handle image loading start
+  const handleImageLoad = (workerId) => {
+    setImageLoading(prev => ({ ...prev, [workerId]: false }));
+  };
+
+  // Handle image loading start
+  const handleImageLoadStart = (workerId) => {
+    setImageLoading(prev => ({ ...prev, [workerId]: true }));
+  };
   if (workers.length === 0) {
     return (
       <div className={cn("text-center py-12", className)}>
@@ -29,14 +63,28 @@ const WorkerProfiles = ({ workers, onEditWorker, onDeleteWorker, className }) =>
           whileHover={{ scale: 1.02 }}
           className="group"
         >
-          <Card className="hover:border-primary/50 transition-all duration-200">
+<Card className="hover:border-primary/50 transition-all duration-200">
             <CardContent className="p-6 text-center">
               <div className="relative mb-4">
-                <img
-                  src={worker.profilePicture}
-                  alt={worker.fullName}
-                  className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-gray-600 group-hover:border-primary/50 transition-colors duration-200"
-                />
+                <div className="w-20 h-20 rounded-full mx-auto border-2 border-gray-600 group-hover:border-primary/50 transition-colors duration-200 overflow-hidden">
+                  {imageErrors[worker.Id] ? (
+                    generateFallbackAvatar(worker.fullName)
+                  ) : (
+                    <img
+                      src={worker.profilePicture}
+                      alt={`${worker.fullName}'s profile picture`}
+                      className="w-full h-full object-cover"
+                      onError={() => handleImageError(worker.Id, worker.fullName)}
+                      onLoad={() => handleImageLoad(worker.Id)}
+                      onLoadStart={() => handleImageLoadStart(worker.Id)}
+                    />
+                  )}
+                  {imageLoading[worker.Id] && (
+                    <div className="absolute inset-0 bg-gray-600 animate-pulse flex items-center justify-center">
+                      <ApperIcon name="User" size={24} className="text-gray-400" />
+                    </div>
+                  )}
+                </div>
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-success rounded-full border-2 border-surface flex items-center justify-center">
                   <ApperIcon name="Check" size={12} className="text-white" />
                 </div>
@@ -85,14 +133,27 @@ const WorkerProfiles = ({ workers, onEditWorker, onDeleteWorker, className }) =>
     <div className="space-y-4">
       {workers.map((worker) => (
         <Card key={worker.Id} className="hover:border-primary/50 transition-all duration-200">
-          <CardContent className="p-4">
+<CardContent className="p-4">
             <div className="flex items-center gap-4">
-              <img
-                src={worker.profilePicture}
-                alt={worker.fullName}
-                className="w-16 h-16 rounded-full object-cover border-2 border-gray-600"
-              />
-              
+              <div className="w-16 h-16 rounded-full border-2 border-gray-600 overflow-hidden flex-shrink-0">
+                {imageErrors[worker.Id] ? (
+                  generateFallbackAvatar(worker.fullName)
+                ) : (
+                  <img
+                    src={worker.profilePicture}
+                    alt={`${worker.fullName}'s profile picture`}
+                    className="w-full h-full object-cover"
+                    onError={() => handleImageError(worker.Id, worker.fullName)}
+                    onLoad={() => handleImageLoad(worker.Id)}
+                    onLoadStart={() => handleImageLoadStart(worker.Id)}
+                  />
+                )}
+                {imageLoading[worker.Id] && (
+                  <div className="absolute inset-0 bg-gray-600 animate-pulse flex items-center justify-center">
+                    <ApperIcon name="User" size={20} className="text-gray-400" />
+                  </div>
+                )}
+              </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-lg font-semibold text-white">{worker.fullName}</h3>
