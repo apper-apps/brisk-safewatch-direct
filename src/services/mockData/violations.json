@@ -1,0 +1,134 @@
+[
+  {
+    "Id": 1,
+    "workerId": 1,
+    "timestamp": "2024-03-15T14:30:00Z",
+    "cameraId": 1,
+    "location": "Zone A - Main Entrance",
+    "missingPPE": ["helmet", "jacket"],
+    "videoSnippet": "video1.mp4",
+    "fineAmount": 85,
+    "status": "pending"
+  },
+  {
+    "Id": 2,
+    "workerId": 3,
+    "timestamp": "2024-03-15T13:45:00Z",
+    "cameraId": 2,
+    "location": "Zone B - Construction Area",
+    "missingPPE": ["helmet"],
+    "videoSnippet": "video2.mp4",
+    "fineAmount": 50,
+    "status": "resolved"
+  },
+  {
+    "Id": 3,
+    "workerId": 4,
+    "timestamp": "2024-03-15T12:20:00Z",
+    "cameraId": 3,
+    "location": "Zone C - Equipment Storage",
+    "missingPPE": ["shoes"],
+    "videoSnippet": "video3.mp4",
+    "fineAmount": 25,
+    "status": "pending"
+  },
+  {
+    "Id": 4,
+    "workerId": 7,
+    "timestamp": "2024-03-15T11:15:00Z",
+    "cameraId": 1,
+    "location": "Zone A - Main Entrance",
+    "missingPPE": ["jacket", "shoes"],
+    "videoSnippet": "video4.mp4",
+    "fineAmount": 60,
+    "status": "pending"
+  },
+  {
+    "Id": 5,
+    "workerId": 2,
+    "timestamp": "2024-03-15T10:30:00Z",
+    "cameraId": 4,
+    "location": "Zone D - Loading Dock",
+    "missingPPE": ["helmet"],
+    "videoSnippet": "video5.mp4",
+    "fineAmount": 50,
+    "status": "resolved"
+  },
+  {
+    "Id": 6,
+    "workerId": 5,
+    "timestamp": "2024-03-15T09:45:00Z",
+    "cameraId": 2,
+    "location": "Zone B - Construction Area",
+    "missingPPE": ["helmet", "jacket", "shoes"],
+    "videoSnippet": "video6.mp4",
+    "fineAmount": 110,
+    "status": "pending"
+  },
+  {
+    "Id": 7,
+    "workerId": 6,
+    "timestamp": "2024-03-15T08:20:00Z",
+    "cameraId": 3,
+    "location": "Zone C - Equipment Storage",
+    "missingPPE": ["jacket"],
+    "videoSnippet": "video7.mp4",
+    "fineAmount": 35,
+    "status": "resolved"
+  },
+  {
+    "Id": 8,
+    "workerId": 8,
+    "timestamp": "2024-03-15T07:30:00Z",
+    "cameraId": 1,
+    "location": "Zone A - Main Entrance",
+    "missingPPE": ["helmet", "shoes"],
+    "videoSnippet": "video8.mp4",
+    "fineAmount": 75,
+    "status": "pending"
+  },
+  {
+    "Id": 9,
+    "workerId": 1,
+    "timestamp": "2024-03-14T16:45:00Z",
+    "cameraId": 4,
+    "location": "Zone D - Loading Dock",
+    "missingPPE": ["jacket"],
+    "videoSnippet": "video9.mp4",
+    "fineAmount": 35,
+    "status": "resolved"
+  },
+  {
+    "Id": 10,
+    "workerId": 3,
+    "timestamp": "2024-03-14T15:20:00Z",
+    "cameraId": 2,
+    "location": "Zone B - Construction Area",
+    "missingPPE": ["helmet"],
+    "videoSnippet": "video10.mp4",
+    "fineAmount": 50,
+    "status": "pending"
+  },
+  {
+    "Id": 11,
+    "workerId": 4,
+    "timestamp": "2024-03-14T14:10:00Z",
+    "cameraId": 3,
+    "location": "Zone C - Equipment Storage",
+    "missingPPE": ["shoes"],
+    "videoSnippet": "video11.mp4",
+    "fineAmount": 25,
+    "status": "resolved"
+  },
+  {
+    "Id": 12,
+    "workerId": 7,
+    "timestamp": "2024-03-14T13:35:00Z",
+    "cameraId": 1,
+    "location": "Zone A - Main Entrance",
+    "missingPPE": ["helmet", "jacket"],
+    "videoSnippet": "video12.mp4",
+    "fineAmount": 85,
+    "status": "pending"
+  }
+]

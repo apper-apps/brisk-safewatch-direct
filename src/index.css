@@ -1,0 +1,94 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0F1419;
+    color: #F8FAFC;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white font-medium px-4 py-2 rounded transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white font-medium px-4 py-2 rounded transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 shadow-lg;
+  }
+  
+  .violation-card {
+    @apply bg-surface rounded-lg p-4 border-2 border-error shadow-lg animate-pulse-red;
+  }
+  
+  .input-field {
+    @apply bg-surface border-2 border-gray-600 rounded px-3 py-2 text-white placeholder-gray-400 focus:border-primary focus:outline-none transition-colors duration-200;
+  }
+  
+  .nav-item {
+    @apply flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors duration-200 hover:bg-surface/50;
+  }
+  
+  .nav-item.active {
+    @apply bg-primary/10 text-primary border-l-4 border-primary;
+  }
+}
+
+.Toastify__toast-container {
+  top: 1rem;
+  right: 1rem;
+  width: 400px;
+  z-index: 9999;
+}
+
+.Toastify__toast {
+  background: #2C3E50;
+  color: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+  min-height: 64px;
+  padding: 16px;
+  margin-bottom: 8px;
+  border: 1px solid #475569;
+}
+
+.Toastify__toast--error {
+  background: #DC3545;
+  border-color: #DC3545;
+}
+
+.Toastify__toast--success {
+  background: #00D084;
+  border-color: #00D084;
+}
+
+.Toastify__toast--warning {
+  background: #FFC107;
+  color: #0F172A;
+  border-color: #FFC107;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.Toastify__close-button {
+  color: currentColor;
+  opacity: 0.8;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}

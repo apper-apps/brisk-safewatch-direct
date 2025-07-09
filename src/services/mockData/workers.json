@@ -1,0 +1,74 @@
+[
+  {
+    "Id": 1,
+    "fullName": "John Mitchell",
+    "username": "jmitchell",
+    "employeeId": "EMP001",
+    "department": "Construction",
+    "profilePicture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "Id": 2,
+    "fullName": "Sarah Rodriguez",
+    "username": "srodriguez",
+    "employeeId": "EMP002",
+    "department": "Safety",
+    "profilePicture": "https://images.unsplash.com/photo-1494790108755-2616b9416e59?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-01-20T09:15:00Z"
+  },
+  {
+    "Id": 3,
+    "fullName": "Michael Chen",
+    "username": "mchen",
+    "employeeId": "EMP003",
+    "department": "Engineering",
+    "profilePicture": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-01T10:30:00Z"
+  },
+  {
+    "Id": 4,
+    "fullName": "Emily Johnson",
+    "username": "ejohnson",
+    "employeeId": "EMP004",
+    "department": "Construction",
+    "profilePicture": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-05T11:45:00Z"
+  },
+  {
+    "Id": 5,
+    "fullName": "David Wilson",
+    "username": "dwilson",
+    "employeeId": "EMP005",
+    "department": "Maintenance",
+    "profilePicture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-10T14:20:00Z"
+  },
+  {
+    "Id": 6,
+    "fullName": "Lisa Thompson",
+    "username": "lthompson",
+    "employeeId": "EMP006",
+    "department": "Quality Control",
+    "profilePicture": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-15T16:00:00Z"
+  },
+  {
+    "Id": 7,
+    "fullName": "Carlos Martinez",
+    "username": "cmartinez",
+    "employeeId": "EMP007",
+    "department": "Construction",
+    "profilePicture": "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-20T13:10:00Z"
+  },
+  {
+    "Id": 8,
+    "fullName": "Amanda Davis",
+    "username": "adavis",
+    "employeeId": "EMP008",
+    "department": "Safety",
+    "profilePicture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    "createdAt": "2024-02-25T15:30:00Z"
+  }
+]

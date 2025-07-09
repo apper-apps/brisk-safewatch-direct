@@ -1,0 +1,44 @@
+[
+  {
+    "Id": 1,
+    "name": "Camera 01",
+    "zone": "Zone A - Main Entrance",
+    "streamUrl": "rtsp://192.168.1.100:554/stream1",
+    "isActive": true
+  },
+  {
+    "Id": 2,
+    "name": "Camera 02",
+    "zone": "Zone B - Construction Area",
+    "streamUrl": "rtsp://192.168.1.101:554/stream2",
+    "isActive": true
+  },
+  {
+    "Id": 3,
+    "name": "Camera 03",
+    "zone": "Zone C - Equipment Storage",
+    "streamUrl": "rtsp://192.168.1.102:554/stream3",
+    "isActive": true
+  },
+  {
+    "Id": 4,
+    "name": "Camera 04",
+    "zone": "Zone D - Loading Dock",
+    "streamUrl": "rtsp://192.168.1.103:554/stream4",
+    "isActive": false
+  },
+  {
+    "Id": 5,
+    "name": "Camera 05",
+    "zone": "Zone E - Office Area",
+    "streamUrl": "rtsp://192.168.1.104:554/stream5",
+    "isActive": true
+  },
+  {
+    "Id": 6,
+    "name": "Camera 06",
+    "zone": "Zone F - Parking Lot",
+    "streamUrl": "rtsp://192.168.1.105:554/stream6",
+    "isActive": true
+  }
+]
